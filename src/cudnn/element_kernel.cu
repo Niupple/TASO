@@ -240,6 +240,7 @@ void Model::measure_element_cost(Element* ele)
     }
     checkCUDA(cudaEventRecord(endEvent));
     checkCUDA(cudaEventSynchronize(endEvent));
+    // printf("ERROR: %s\n", cudaGetErrorString(cudaGetLastError()));
     float milliseconds;
     cudaEventElapsedTime(&milliseconds, startEvent, endEvent);
     ele->runtime = milliseconds / REPEAT_TIMES;

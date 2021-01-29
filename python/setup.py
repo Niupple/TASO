@@ -20,7 +20,8 @@ from setuptools import find_packages
 # need to use distutils.core for correct placement of cython dll           
 if "--inplace" in sys.argv:                                                
     from distutils.core import setup
-    from distutils.extension import Extension                              
+    from distutils.extension import Extension
+    sys.argv.remove("--inplace")
 else:
     from setuptools import setup
     from setuptools.extension import Extension

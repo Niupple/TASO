@@ -819,6 +819,7 @@ def load_onnx(filename):
 
 input_weight_names = dict()
 input_weight_names['Add'] = ['input1', 'input2']
+input_weight_names['Sub'] = ['input1', 'input2']
 input_weight_names['AveragePool'] = ['input']
 input_weight_names['BatchNormalization'] = ['input', 'scale', 'bias', 'mean', 'var']
 input_weight_names['Concat'] = ['input1', 'input2', 'input3', 'input4', 'input5', 'input6']
@@ -831,6 +832,7 @@ input_weight_names['Transpose'] = ['input']
 
 operator_attrs = dict()
 operator_attrs['Add'] = []
+operator_attrs['Sub'] = []
 operator_attrs['ArgMax'] = []
 operator_attrs['ArgMin'] = []
 operator_attrs['AveragePool'] = ['kernel_shape', 'pads', 'strides']

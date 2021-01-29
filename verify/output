@@ -1,0 +1,11078 @@
+Verifying rule #0: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_1, input_4), input_5) ==
+matmul_0(input_1, matmul_0(input_4, input_5))
+
+Checking... (0)
+Proved!
+
+================================================================================
+Verifying rule #1: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_1, input_4),
+         matmul_0(input_5, input_6)) ==
+matmul_0(matmul_0(input_1, matmul_0(input_4, input_5)),
+         input_6)
+
+Checking... (1)
+Proved!
+
+================================================================================
+Verifying rule #2: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(concat_0(0, input_4, matmul_0(input_1, input_4)),
+         input_5) ==
+concat_0(0,
+         matmul_0(input_4, input_5),
+         matmul_0(input_1, matmul_0(input_4, input_5)))
+
+Checking... (2)
+Proved!
+
+================================================================================
+Verifying rule #3: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(matmul_0(input_1, input_4), input_5),
+         input_5) ==
+matmul_0(input_1,
+         matmul_0(matmul_0(input_4, input_5), input_5))
+
+Checking... (3)
+Proved!
+
+================================================================================
+Verifying rule #4: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_1, input_4),
+         matmul_0(input_5, input_6)) ==
+matmul_0(input_1,
+         matmul_0(matmul_0(input_4, input_5), input_6))
+
+Checking... (4)
+Proved!
+
+================================================================================
+Verifying rule #5: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(matmul_0(input_1, input_4),
+        matmul_0(matmul_0(input_1, input_4), input_5)) ==
+matmul_0(input_1,
+         ewadd_0(input_4, matmul_0(input_4, input_5)))
+
+Checking... (5)
+Proved!
+
+================================================================================
+Verifying rule #6: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(ewadd_0(input_1, matmul_0(input_1, input_4)),
+         input_5) ==
+matmul_0(input_1,
+         ewadd_0(input_5, matmul_0(input_4, input_5)))
+
+Checking... (6)
+Proved!
+
+================================================================================
+Verifying rule #7: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         matmul_0(input_1, input_4),
+         matmul_0(matmul_0(input_1, input_4), input_5)) ==
+matmul_0(input_1,
+         concat_0(1, input_4, matmul_0(input_4, input_5)))
+
+Checking... (7)
+Proved!
+
+================================================================================
+Verifying rule #8: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_6, matmul_0(input_4, input_5)),
+         input_4) ==
+matmul_0(input_6,
+         matmul_0(input_4, matmul_0(input_5, input_4)))
+
+Checking... (8)
+Proved!
+
+================================================================================
+Verifying rule #9: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 2 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_4, input_5), input_4) ==
+matmul_0(input_4, matmul_0(input_5, input_4))
+
+Checking... (9)
+Proved!
+Z3 expression:
+matmul_0(input_5, matmul_0(input_4, input_5)) ==
+matmul_0(matmul_0(input_5, input_4), input_5)
+
+Checking... (9)
+Proved!
+
+================================================================================
+Verifying rule #10: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_4, input_5),
+         matmul_0(matmul_0(input_4, input_5), input_4)) ==
+matmul_0(matmul_0(input_4, matmul_0(input_5, input_4)),
+         matmul_0(input_5, input_4))
+
+Checking... (10)
+Proved!
+
+================================================================================
+Verifying rule #11: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_6, matmul_0(input_4, input_5)),
+         input_4) ==
+matmul_0(matmul_0(input_6, input_4),
+         matmul_0(input_5, input_4))
+
+Checking... (11)
+Proved!
+
+================================================================================
+Verifying rule #12: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_4, matmul_0(input_4, input_5)),
+         input_6) ==
+matmul_0(input_4,
+         matmul_0(input_4, matmul_0(input_5, input_6)))
+
+Checking... (12)
+Proved!
+
+================================================================================
+Verifying rule #13: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_5, matmul_0(input_4, input_5)),
+         input_6) ==
+matmul_0(input_5,
+         matmul_0(input_4, matmul_0(input_5, input_6)))
+
+Checking... (13)
+Proved!
+
+================================================================================
+Verifying rule #14: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_6, matmul_0(input_4, input_5)),
+         input_6) ==
+matmul_0(input_6,
+         matmul_0(input_4, matmul_0(input_5, input_6)))
+
+Checking... (14)
+Proved!
+
+================================================================================
+Verifying rule #15: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(ewadd_0(input_5, matmul_0(input_4, input_5)),
+         input_6) ==
+ewadd_0(matmul_0(input_5, input_6),
+        matmul_0(input_4, matmul_0(input_5, input_6)))
+
+Checking... (15)
+Proved!
+
+================================================================================
+Verifying rule #16: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_5, matmul_0(input_4, input_5)),
+         input_6) ==
+matmul_0(matmul_0(input_5, input_4),
+         matmul_0(input_5, input_6))
+
+Checking... (16)
+Proved!
+
+================================================================================
+Verifying rule #17: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_6, matmul_0(input_4, input_5)),
+         input_6) ==
+matmul_0(matmul_0(input_6, input_4),
+         matmul_0(input_5, input_6))
+
+Checking... (17)
+Proved!
+
+================================================================================
+Verifying rule #18: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(input_6,
+         matmul_0(input_4, matmul_0(input_4, input_5))) ==
+matmul_0(matmul_0(matmul_0(input_6, input_4), input_4),
+         input_5)
+
+Checking... (18)
+Proved!
+
+================================================================================
+Verifying rule #19: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_4, input_6),
+         matmul_0(input_4, input_5)) ==
+matmul_0(input_4,
+         matmul_0(matmul_0(input_6, input_4), input_5))
+
+Checking... (19)
+Proved!
+
+================================================================================
+Verifying rule #20: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -6
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(matmul_0(input_5, input_6),
+         matmul_0(input_4, input_5)) ==
+matmul_0(input_5,
+         matmul_0(matmul_0(input_6, input_4), input_5))
+
+Checking... (20)
+Proved!
+
+================================================================================
+Verifying rule #21: srcOp {
+  type: 18
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -6
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+matmul_0(input_6,
+         matmul_0(input_5, matmul_0(input_4, input_5))) ==
+matmul_0(matmul_0(matmul_0(input_6, input_5), input_4),
+         input_5)
+
+Checking... (21)
+Proved!
+
+================================================================================
+Verifying rule #22: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(matmul_0(input_1, input_4),
+        matmul_0(input_2, input_4)) ==
+matmul_0(ewadd_0(input_1, input_2), input_4)
+
+Checking... (22)
+Proved!
+
+================================================================================
+Verifying rule #23: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(input_3,
+        ewadd_0(input_3, ewadd_0(input_1, input_2))) ==
+ewadd_0(ewadd_0(input_1, input_3),
+        ewadd_0(input_2, input_3))
+
+Checking... (23)
+Proved!
+
+================================================================================
+Verifying rule #24: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(input_3, ewadd_0(input_1, input_2)) ==
+ewadd_0(input_2, ewadd_0(input_1, input_3))
+
+Checking... (24)
+Proved!
+
+================================================================================
+Verifying rule #25: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(ewadd_0(input_1, input_2),
+        ewadd_0(input_2, input_3)) ==
+ewadd_0(input_2,
+        ewadd_0(input_2, ewadd_0(input_1, input_3)))
+
+Checking... (25)
+Proved!
+
+================================================================================
+Verifying rule #26: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(input_3,
+        ewadd_0(input_3, ewadd_0(input_1, input_2))) ==
+ewadd_0(input_2,
+        ewadd_0(input_3, ewadd_0(input_1, input_3)))
+
+Checking... (26)
+Proved!
+
+================================================================================
+Verifying rule #27: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(input_3,
+        ewadd_0(input_3, ewadd_0(input_1, input_2))) ==
+ewadd_0(ewadd_0(input_2, input_3),
+        ewadd_0(input_1, input_3))
+
+Checking... (27)
+Proved!
+
+================================================================================
+Verifying rule #28: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(input_3, ewadd_0(input_1, input_2)) ==
+ewadd_0(input_1, ewadd_0(input_2, input_3))
+
+Checking... (28)
+Proved!
+
+================================================================================
+Verifying rule #29: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(ewadd_0(input_1, input_2),
+        ewadd_0(input_1, input_3)) ==
+ewadd_0(input_1,
+        ewadd_0(input_1, ewadd_0(input_2, input_3)))
+
+Checking... (29)
+Proved!
+
+================================================================================
+Verifying rule #30: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(input_3,
+        ewadd_0(input_3, ewadd_0(input_1, input_2))) ==
+ewadd_0(input_1,
+        ewadd_0(input_3, ewadd_0(input_2, input_3)))
+
+Checking... (30)
+Proved!
+
+================================================================================
+Verifying rule #31: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(matmul_0(input_1, input_4),
+        matmul_0(input_1, input_5)) ==
+matmul_0(input_1, ewadd_0(input_4, input_5))
+
+Checking... (31)
+Proved!
+
+================================================================================
+Verifying rule #32: srcOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewadd_0(input_12, ewadd_0(input_10, input_11)),
+         ewadd_0(input_12, ewadd_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewadd_0(input_11, ewadd_0(input_10, input_12)),
+         ewadd_0(input_11, ewadd_0(input_10, input_12)))
+
+Checking... (32)
+Proved!
+
+================================================================================
+Verifying rule #33: srcOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewadd_0(input_12, ewadd_0(input_10, input_11)),
+         ewadd_0(input_12, ewadd_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewadd_0(input_11, ewadd_0(input_10, input_12)),
+         ewadd_0(input_11, ewadd_0(input_10, input_12)))
+
+Checking... (33)
+Proved!
+
+================================================================================
+Verifying rule #34: srcOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewadd_0(input_12, ewadd_0(input_10, input_11)),
+         ewadd_0(input_12, ewadd_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewadd_0(input_10, ewadd_0(input_11, input_12)),
+         ewadd_0(input_10, ewadd_0(input_11, input_12)))
+
+Checking... (34)
+Proved!
+
+================================================================================
+Verifying rule #35: srcOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewadd_0(input_12, ewadd_0(input_10, input_11)),
+         ewadd_0(input_12, ewadd_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewadd_0(input_10, ewadd_0(input_11, input_12)),
+         ewadd_0(input_10, ewadd_0(input_11, input_12)))
+
+Checking... (35)
+Proved!
+
+================================================================================
+Verifying rule #36: srcOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_1, ewadd_0(input_2, input_3)) ==
+ewadd_0(ewmul_0(input_1, input_2),
+        ewmul_0(input_1, input_3))
+
+Checking... (36)
+Proved!
+
+================================================================================
+Verifying rule #37: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_2, ewadd_0(input_1, input_3)) ==
+ewadd_0(ewmul_0(input_1, input_2),
+        ewmul_0(input_2, input_3))
+
+Checking... (37)
+Proved!
+
+================================================================================
+Verifying rule #38: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(ewmul_0(input_1, input_2),
+        ewmul_0(input_3, ewmul_0(input_1, input_2))) ==
+ewmul_0(input_2,
+        ewadd_0(input_1, ewmul_0(input_1, input_3)))
+
+Checking... (38)
+Proved!
+
+================================================================================
+Verifying rule #39: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewadd_0(input_2, ewmul_0(input_1, input_2))) ==
+ewmul_0(input_2,
+        ewadd_0(input_3, ewmul_0(input_1, input_3)))
+
+Checking... (39)
+Proved!
+
+================================================================================
+Verifying rule #40: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3, ewadd_0(input_1, input_2)) ==
+ewadd_0(ewmul_0(input_1, input_3),
+        ewmul_0(input_2, input_3))
+
+Checking... (40)
+Proved!
+
+================================================================================
+Verifying rule #41: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewmul_0(input_3, ewmul_0(input_1, input_2))) ==
+ewmul_0(ewmul_0(input_1, input_3),
+        ewmul_0(input_2, input_3))
+
+Checking... (41)
+Proved!
+
+================================================================================
+Verifying rule #42: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3, ewmul_0(input_1, input_2)) ==
+ewmul_0(input_2, ewmul_0(input_1, input_3))
+
+Checking... (42)
+Proved!
+
+================================================================================
+Verifying rule #43: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(ewmul_0(input_1, input_2),
+        ewmul_0(input_2, input_3)) ==
+ewmul_0(input_2,
+        ewmul_0(input_2, ewmul_0(input_1, input_3)))
+
+Checking... (43)
+Proved!
+
+================================================================================
+Verifying rule #44: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewmul_0(input_3, ewmul_0(input_1, input_2))) ==
+ewmul_0(input_2,
+        ewmul_0(input_3, ewmul_0(input_1, input_3)))
+
+Checking... (44)
+Proved!
+
+================================================================================
+Verifying rule #45: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(ewmul_0(input_1, input_2),
+        ewmul_0(input_3, ewmul_0(input_1, input_2))) ==
+ewmul_0(input_1,
+        ewadd_0(input_2, ewmul_0(input_2, input_3)))
+
+Checking... (45)
+Proved!
+
+================================================================================
+Verifying rule #46: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewadd_0(input_1, ewmul_0(input_1, input_2))) ==
+ewmul_0(input_1,
+        ewadd_0(input_3, ewmul_0(input_2, input_3)))
+
+Checking... (46)
+Proved!
+
+================================================================================
+Verifying rule #47: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3, ewadd_0(input_1, input_2)) ==
+ewadd_0(ewmul_0(input_2, input_3),
+        ewmul_0(input_1, input_3))
+
+Checking... (47)
+Proved!
+
+================================================================================
+Verifying rule #48: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewmul_0(input_3, ewmul_0(input_1, input_2))) ==
+ewmul_0(ewmul_0(input_2, input_3),
+        ewmul_0(input_1, input_3))
+
+Checking... (48)
+Proved!
+
+================================================================================
+Verifying rule #49: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3, ewmul_0(input_1, input_2)) ==
+ewmul_0(input_1, ewmul_0(input_2, input_3))
+
+Checking... (49)
+Proved!
+
+================================================================================
+Verifying rule #50: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewadd_0(input_2, ewmul_0(input_1, input_2))) ==
+ewadd_0(ewmul_0(input_2, input_3),
+        ewmul_0(input_1, ewmul_0(input_2, input_3)))
+
+Checking... (50)
+Proved!
+
+================================================================================
+Verifying rule #51: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(ewmul_0(input_1, input_2),
+        ewmul_0(input_1, input_3)) ==
+ewmul_0(input_1,
+        ewmul_0(input_1, ewmul_0(input_2, input_3)))
+
+Checking... (51)
+Proved!
+
+================================================================================
+Verifying rule #52: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -3
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_3,
+        ewmul_0(input_3, ewmul_0(input_1, input_2))) ==
+ewmul_0(input_1,
+        ewmul_0(input_3, ewmul_0(input_2, input_3)))
+
+Checking... (52)
+Proved!
+
+================================================================================
+Verifying rule #53: srcOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewmul_0(input_12, ewmul_0(input_10, input_11)),
+         ewmul_0(input_12, ewmul_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewmul_0(input_11, ewmul_0(input_10, input_12)),
+         ewmul_0(input_11, ewmul_0(input_10, input_12)))
+
+Checking... (53)
+Proved!
+
+================================================================================
+Verifying rule #54: srcOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewmul_0(input_12, ewmul_0(input_10, input_11)),
+         ewmul_0(input_12, ewmul_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewmul_0(input_11, ewmul_0(input_10, input_12)),
+         ewmul_0(input_11, ewmul_0(input_10, input_12)))
+
+Checking... (54)
+Proved!
+
+================================================================================
+Verifying rule #55: srcOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewmul_0(input_12, ewmul_0(input_10, input_11)),
+         ewmul_0(input_12, ewmul_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         ewmul_0(input_10, ewmul_0(input_11, input_12)),
+         ewmul_0(input_10, ewmul_0(input_11, input_12)))
+
+Checking... (55)
+Proved!
+
+================================================================================
+Verifying rule #56: srcOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -12
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -11
+    tsId: 0
+  }
+  input {
+    opId: -12
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewmul_0(input_12, ewmul_0(input_10, input_11)),
+         ewmul_0(input_12, ewmul_0(input_10, input_11))) ==
+conv2d_0(1,
+         1,
+         0,
+         2,
+         ewmul_0(input_10, ewmul_0(input_11, input_12)),
+         ewmul_0(input_10, ewmul_0(input_11, input_12)))
+
+Checking... (56)
+Proved!
+
+================================================================================
+Verifying rule #57: srcOp {
+  type: 16
+  input {
+    opId: -14
+    tsId: 0
+  }
+  input {
+    opId: -15
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -13
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -13
+    tsId: 0
+  }
+  input {
+    opId: -15
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -13
+    tsId: 0
+  }
+  input {
+    opId: -14
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_13, ewadd_0(input_14, input_15)) ==
+ewadd_0(ewmul_0(input_13, input_15),
+        ewmul_0(input_13, input_14))
+
+Checking... (57)
+Proved!
+
+================================================================================
+Verifying rule #58: srcOp {
+  type: 16
+  input {
+    opId: -13
+    tsId: 0
+  }
+  input {
+    opId: -15
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -14
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -14
+    tsId: 0
+  }
+  input {
+    opId: -15
+    tsId: 0
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: -13
+    tsId: 0
+  }
+  input {
+    opId: -14
+    tsId: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewmul_0(input_14, ewadd_0(input_13, input_15)) ==
+ewadd_0(ewmul_0(input_14, input_15),
+        ewmul_0(input_13, input_14))
+
+Checking... (58)
+Proved!
+
+================================================================================
+Verifying rule #59: srcOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1, 1, 0, 0, input_7, ewadd_0(input_10, input_11)) ==
+ewadd_0(conv2d_0(1, 1, 0, 0, input_7, input_10),
+        conv2d_0(1, 1, 0, 0, input_7, input_11))
+
+Checking... (59)
+Proved!
+
+================================================================================
+Verifying rule #60: srcOp {
+  type: 16
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1, 1, 0, 0, ewadd_0(input_7, input_8), input_10) ==
+ewadd_0(conv2d_0(1, 1, 0, 0, input_7, input_10),
+        conv2d_0(1, 1, 0, 0, input_8, input_10))
+
+Checking... (60)
+Proved!
+
+================================================================================
+Verifying rule #61: srcOp {
+  type: 16
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1, 1, 0, 0, input_7, ewadd_0(input_10, input_11)) ==
+ewadd_0(conv2d_0(1, 1, 0, 0, input_7, input_11),
+        conv2d_0(1, 1, 0, 0, input_7, input_10))
+
+Checking... (61)
+Proved!
+
+================================================================================
+Verifying rule #62: srcOp {
+  type: 16
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1, 1, 0, 0, ewadd_0(input_7, input_8), input_10) ==
+ewadd_0(conv2d_0(1, 1, 0, 0, input_8, input_10),
+        conv2d_0(1, 1, 0, 0, input_7, input_10))
+
+Checking... (62)
+Proved!
+
+================================================================================
+Verifying rule #63: srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -19
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -19
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 2 outputs
+
+Z3 expression:
+relu_0(conv2d_0(1, 1, 0, 0, input_7, input_19)) ==
+conv2d_0(1, 1, 0, 2, input_7, input_19)
+
+Checking... (63)
+Proved!
+Z3 expression:
+conv2d_0(1, 1, 0, 2, input_8, input_10) ==
+relu_0(conv2d_0(1, 1, 0, 0, input_8, input_10))
+
+Checking... (63)
+Proved!
+
+================================================================================
+Verifying rule #64: srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 0
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+relu_0(conv2d_0(1, 1, 0, 0, input_7, input_10)) ==
+conv2d_0(1, 1, 0, 2, input_7, input_10)
+
+Checking... (64)
+Proved!
+
+================================================================================
+Verifying rule #65: srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 0
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 2 outputs
+
+Z3 expression:
+relu_0(conv2d_0(1, 1, 0, 0, input_7, input_10)) ==
+conv2d_0(1, 1, 0, 2, input_7, input_10)
+
+Checking... (65)
+Proved!
+Z3 expression:
+conv2d_0(1, 1, 0, 2, input_8, input_11) ==
+relu_0(conv2d_0(1, 1, 0, 0, input_8, input_11))
+
+Checking... (65)
+Proved!
+
+================================================================================
+Verifying rule #66: srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         2,
+         relu_0(conv2d_0(1, 1, 0, 0, input_7, input_10)),
+         input_11) ==
+relu_0(conv2d_0(1,
+                1,
+                0,
+                0,
+                conv2d_0(1, 1, 0, 2, input_7, input_10),
+                input_11))
+
+Checking... (66)
+Proved!
+
+================================================================================
+Verifying rule #67: srcOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: -7
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+relu_0(concat_0(1,
+                input_7,
+                conv2d_0(1, 1, 0, 0, input_8, input_10))) ==
+concat_0(1,
+         relu_0(input_7),
+         conv2d_0(1, 1, 0, 2, input_8, input_10))
+
+Checking... (67)
+Proved!
+
+================================================================================
+Verifying rule #68: srcOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: -7
+    tsId: 0
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+relu_0(concat_0(0,
+                input_7,
+                conv2d_0(1, 1, 0, 0, input_8, input_10))) ==
+concat_0(0,
+         relu_0(input_7),
+         conv2d_0(1, 1, 0, 2, input_8, input_10))
+
+Checking... (68)
+Proved!
+
+================================================================================
+Verifying rule #69: srcOp {
+  type: 8
+  input {
+    opId: -1
+    tsId: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1, relu_0(input_1), relu_0(input_2)) ==
+relu_0(concat_0(1, input_1, input_2))
+
+Checking... (69)
+Proved!
+
+================================================================================
+Verifying rule #70: srcOp {
+  type: 8
+  input {
+    opId: -1
+    tsId: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 13
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 2
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+}
+mappedOutput {
+  srcOpId: 0
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 1
+}
+ with 2 outputs
+
+Z3 expression:
+relu_0(input_1) ==
+split_0(1, relu_0(concat_0(1, input_1, input_2)))
+
+Checking... (70)
+Proved!
+Z3 expression:
+relu_0(input_2) ==
+split_1(1, relu_0(concat_0(1, input_1, input_2)))
+
+Checking... (70)
+Proved!
+
+================================================================================
+Verifying rule #71: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         ewadd_0(input_1, input_2),
+         ewadd_0(input_2, input_3)) ==
+ewadd_0(concat_0(1, input_1, input_2),
+        concat_0(1, input_2, input_3))
+
+Checking... (71)
+Proved!
+
+================================================================================
+Verifying rule #72: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         ewmul_0(input_1, input_2),
+         ewmul_0(input_2, input_3)) ==
+ewmul_0(concat_0(1, input_1, input_2),
+        concat_0(1, input_2, input_3))
+
+Checking... (72)
+Proved!
+
+================================================================================
+Verifying rule #73: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(matmul_0(input_1, input_4),
+        matmul_0(input_2, input_5)) ==
+matmul_0(concat_0(1, input_1, input_2),
+         concat_0(0, input_4, input_5))
+
+Checking... (73)
+Proved!
+
+================================================================================
+Verifying rule #74: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         ewadd_0(input_1, input_2),
+         ewadd_0(input_2, input_3)) ==
+ewadd_0(concat_0(1, input_2, input_3),
+        concat_0(1, input_1, input_2))
+
+Checking... (74)
+Proved!
+
+================================================================================
+Verifying rule #75: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -3
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         ewmul_0(input_1, input_2),
+         ewmul_0(input_2, input_3)) ==
+ewmul_0(concat_0(1, input_2, input_3),
+        concat_0(1, input_1, input_2))
+
+Checking... (75)
+Proved!
+
+================================================================================
+Verifying rule #76: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         matmul_0(input_1, input_4),
+         matmul_0(input_1, input_5)) ==
+matmul_0(input_1, concat_0(1, input_4, input_5))
+
+Checking... (76)
+Proved!
+
+================================================================================
+Verifying rule #77: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 13
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 2
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+}
+mappedOutput {
+  srcOpId: 0
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 1
+}
+ with 2 outputs
+
+Z3 expression:
+matmul_0(input_1, input_4) ==
+split_0(1, matmul_0(input_1, concat_0(1, input_4, input_5)))
+
+Checking... (77)
+Proved!
+Z3 expression:
+matmul_0(input_1, input_5) ==
+split_1(1, matmul_0(input_1, concat_0(1, input_4, input_5)))
+
+Checking... (77)
+Proved!
+
+================================================================================
+Verifying rule #78: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         matmul_0(input_1, input_4),
+         matmul_0(input_2, input_4)) ==
+matmul_0(concat_0(0, input_1, input_2), input_4)
+
+Checking... (78)
+Proved!
+
+================================================================================
+Verifying rule #79: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 13
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 2
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 0
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 1
+}
+ with 2 outputs
+
+Z3 expression:
+matmul_0(input_1, input_4) ==
+split_0(0, matmul_0(concat_0(0, input_1, input_2), input_4))
+
+Checking... (79)
+Proved!
+Z3 expression:
+matmul_0(input_2, input_4) ==
+split_1(0, matmul_0(concat_0(0, input_1, input_2), input_4))
+
+Checking... (79)
+Proved!
+
+================================================================================
+Verifying rule #80: srcOp {
+  type: 8
+  input {
+    opId: -1
+    tsId: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0, relu_0(input_1), relu_0(input_2)) ==
+relu_0(concat_0(0, input_1, input_2))
+
+Checking... (80)
+Proved!
+
+================================================================================
+Verifying rule #81: srcOp {
+  type: 8
+  input {
+    opId: -1
+    tsId: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 13
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 2
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 0
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 1
+}
+ with 2 outputs
+
+Z3 expression:
+relu_0(input_1) ==
+split_0(0, relu_0(concat_0(0, input_1, input_2)))
+
+Checking... (81)
+Proved!
+Z3 expression:
+relu_0(input_2) ==
+split_1(0, relu_0(concat_0(0, input_1, input_2)))
+
+Checking... (81)
+Proved!
+
+================================================================================
+Verifying rule #82: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewadd_0(input_1, input_2),
+         ewadd_0(input_4, input_5)) ==
+ewadd_0(concat_0(0, input_1, input_4),
+        concat_0(0, input_2, input_5))
+
+Checking... (82)
+Proved!
+
+================================================================================
+Verifying rule #83: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewmul_0(input_1, input_2),
+         ewmul_0(input_4, input_5)) ==
+ewmul_0(concat_0(0, input_1, input_4),
+        concat_0(0, input_2, input_5))
+
+Checking... (83)
+Proved!
+
+================================================================================
+Verifying rule #84: srcOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         concat_0(1, input_1, input_2),
+         concat_0(1, input_4, input_5)) ==
+concat_0(1,
+         concat_0(0, input_1, input_4),
+         concat_0(0, input_2, input_5))
+
+Checking... (84)
+Proved!
+
+================================================================================
+Verifying rule #85: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewadd_0(input_1, input_2),
+         ewadd_0(input_4, input_5)) ==
+ewadd_0(concat_0(0, input_1, input_5),
+        concat_0(0, input_2, input_4))
+
+Checking... (85)
+Proved!
+
+================================================================================
+Verifying rule #86: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewmul_0(input_1, input_2),
+         ewmul_0(input_4, input_5)) ==
+ewmul_0(concat_0(0, input_1, input_5),
+        concat_0(0, input_2, input_4))
+
+Checking... (86)
+Proved!
+
+================================================================================
+Verifying rule #87: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewadd_0(input_1, input_2),
+         ewadd_0(input_4, input_5)) ==
+ewadd_0(concat_0(0, input_2, input_4),
+        concat_0(0, input_1, input_5))
+
+Checking... (87)
+Proved!
+
+================================================================================
+Verifying rule #88: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewmul_0(input_1, input_2),
+         ewmul_0(input_4, input_5)) ==
+ewmul_0(concat_0(0, input_2, input_4),
+        concat_0(0, input_1, input_5))
+
+Checking... (88)
+Proved!
+
+================================================================================
+Verifying rule #89: srcOp {
+  type: 16
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewadd_0(input_1, input_2),
+         ewadd_0(input_4, input_5)) ==
+ewadd_0(concat_0(0, input_2, input_5),
+        concat_0(0, input_1, input_4))
+
+Checking... (89)
+Proved!
+
+================================================================================
+Verifying rule #90: srcOp {
+  type: 17
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(0,
+         ewmul_0(input_1, input_2),
+         ewmul_0(input_4, input_5)) ==
+ewmul_0(concat_0(0, input_2, input_5),
+        concat_0(0, input_1, input_4))
+
+Checking... (90)
+Proved!
+
+================================================================================
+Verifying rule #91: srcOp {
+  type: 18
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -4
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 18
+  input {
+    opId: -2
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -5
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -1
+    tsId: 0
+  }
+  input {
+    opId: -2
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 2
+  }
+}
+dstOp {
+  type: 18
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(matmul_0(input_1, input_4),
+        matmul_0(input_2, input_5)) ==
+matmul_0(concat_0(1, input_1, input_2),
+         concat_0(0, input_4, input_5))
+
+Checking... (91)
+Proved!
+
+================================================================================
+Verifying rule #92: srcOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -19
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -19
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         0,
+         concat_0(1,
+                  input_5,
+                  concat_0(1, input_4, input_19)),
+         concat_0(1,
+                  input_5,
+                  concat_0(1, input_4, input_19))) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         concat_0(1,
+                  input_4,
+                  concat_0(1, input_5, input_19)),
+         concat_0(1,
+                  input_4,
+                  concat_0(1, input_5, input_19)))
+
+Checking... (92)
+Proved!
+
+================================================================================
+Verifying rule #93: srcOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: -19
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -5
+    tsId: 0
+  }
+  input {
+    opId: -19
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -4
+    tsId: 0
+  }
+  input {
+    opId: 0
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 1
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 2
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+conv2d_0(1,
+         1,
+         0,
+         2,
+         concat_0(1,
+                  input_5,
+                  concat_0(1, input_4, input_19)),
+         concat_0(1,
+                  input_5,
+                  concat_0(1, input_4, input_19))) ==
+conv2d_0(1,
+         1,
+         0,
+         2,
+         concat_0(1,
+                  input_4,
+                  concat_0(1, input_5, input_19)),
+         concat_0(1,
+                  input_4,
+                  concat_0(1, input_5, input_19)))
+
+Checking... (93)
+Proved!
+
+================================================================================
+Verifying rule #94: srcOp {
+  type: 8
+  input {
+    opId: -7
+    tsId: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: -8
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 1
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1, relu_0(input_7), relu_0(input_8)) ==
+relu_0(concat_0(1, input_7, input_8))
+
+Checking... (94)
+Proved!
+
+================================================================================
+Verifying rule #95: srcOp {
+  type: 8
+  input {
+    opId: -7
+    tsId: 0
+  }
+}
+srcOp {
+  type: 8
+  input {
+    opId: -8
+    tsId: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 8
+  input {
+    opId: 0
+    tsId: 0
+  }
+}
+dstOp {
+  type: 13
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 2
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+}
+mappedOutput {
+  srcOpId: 0
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+mappedOutput {
+  srcOpId: 1
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 1
+}
+ with 2 outputs
+
+Z3 expression:
+relu_0(input_7) ==
+split_0(1, relu_0(concat_0(1, input_7, input_8)))
+
+Checking... (95)
+Proved!
+Z3 expression:
+relu_0(input_8) ==
+split_1(1, relu_0(concat_0(1, input_7, input_8)))
+
+Checking... (95)
+Proved!
+
+================================================================================
+Verifying rule #96: srcOp {
+  type: 16
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -9
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -9
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         ewadd_0(input_7, input_8),
+         ewadd_0(input_8, input_9)) ==
+ewadd_0(concat_0(1, input_7, input_8),
+        concat_0(1, input_8, input_9))
+
+Checking... (96)
+Proved!
+
+================================================================================
+Verifying rule #97: srcOp {
+  type: 17
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+}
+srcOp {
+  type: 17
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -9
+    tsId: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -9
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 17
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         ewmul_0(input_7, input_8),
+         ewmul_0(input_8, input_9)) ==
+ewmul_0(concat_0(1, input_7, input_8),
+        concat_0(1, input_8, input_9))
+
+Checking... (97)
+Proved!
+
+================================================================================
+Verifying rule #98: srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 16
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+ewadd_0(conv2d_0(1, 1, 0, 0, input_7, input_10),
+        conv2d_0(1, 1, 0, 0, input_8, input_11)) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         concat_0(1, input_7, input_8),
+         concat_0(1, input_10, input_11))
+
+Checking... (98)
+Proved!
+
+================================================================================
+Verifying rule #99: srcOp {
+  type: 3
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -10
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 3
+  input {
+    opId: -8
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+srcOp {
+  type: 12
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -7
+    tsId: 0
+  }
+  input {
+    opId: -8
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 1
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 12
+  input {
+    opId: -10
+    tsId: 0
+  }
+  input {
+    opId: -11
+    tsId: 0
+  }
+  para {
+    key: 1
+    value: 2
+  }
+  para {
+    key: 11
+    value: 0
+  }
+  para {
+    key: 10
+    value: 4
+  }
+}
+dstOp {
+  type: 3
+  input {
+    opId: 0
+    tsId: 0
+  }
+  input {
+    opId: 1
+    tsId: 0
+  }
+  para {
+    key: 4
+    value: 3
+  }
+  para {
+    key: 5
+    value: 3
+  }
+  para {
+    key: 6
+    value: 1
+  }
+  para {
+    key: 7
+    value: 1
+  }
+  para {
+    key: 8
+    value: 0
+  }
+  para {
+    key: 9
+    value: 0
+  }
+}
+mappedOutput {
+  srcOpId: 2
+  dstOpId: 2
+  srcTsId: 0
+  dstTsId: 0
+}
+ with 1 outputs
+
+Z3 expression:
+concat_0(1,
+         conv2d_0(1, 1, 0, 0, input_7, input_10),
+         conv2d_0(1, 1, 0, 0, input_8, input_11)) ==
+conv2d_0(1,
+         1,
+         0,
+         0,
+         concat_0(1, input_7, input_8),
+         concat_0(0, input_10, input_11))
+
+Checking... (99)
+Error!

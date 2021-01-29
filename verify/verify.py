@@ -598,9 +598,10 @@ if __name__ == '__main__':
     }[os.path.basename(sys.argv[1])]
 
     for i, rule in enumerate(rules.rule):
+        print("Verifying rule #{}: {} with {} outputs\n".format(i, rule, len(rule.mappedOutput)))
         if i in blacklist:
+            print("this is in blacklist")
             continue
-        # print("Verifying rule: {} with {} outputs\n".format(rule, len(rule.mappedOutput)))
         for output in rule.mappedOutput:
             # print("Verifing output: {}".format(output))
             src_tensor = rules_pb2.Tensor(opId=output.srcOpId, tsId=output.srcTsId)
@@ -618,6 +619,7 @@ if __name__ == '__main__':
             if s.check() == z3.unsat:
                 print("Proved!")
             else:
+                print("Error!")
                 assert False
         print('\n' + '='*80)
-    print "Done"
+    print("Done")

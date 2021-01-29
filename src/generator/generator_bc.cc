@@ -19,6 +19,7 @@
 typedef int TYPE;
 #define MAX_SIZE 512
 #define MAX_NUM_OPS 8
+#define SEARCH_NUM_OPS 3
 #define MAX_NUM_TENSORS 8
 #define BATCHSIZE 2
 #define NO_SAME_INPUTS
@@ -1244,6 +1245,18 @@ bool pass_checks(const GraphTemp& g1,
   return true;
 }
 
+/*
+function that checks if g1 and g2 are the same subgraph. (Input Rename)
+function returns true if and only if: 
+  - g1 and g2 have identical op lists (both type and number and order in the lists), and
+  - for each pair of op's with the same index:
+    - for each pair of input's with the same index:
+      - they should have the same tensor id (what is this ???)
+      - if they are not Input of the subgraph, they should have the same type of op
+      - otherwise, their inputs are regarded the same across two graphs
+Note that this function is not symmetric, as the input mapping checks only whether there is
+  a mapping (not a bijection) from g1's input to g2.
+*/
 bool same_via_subst(const GraphTemp& g1,
                     const GraphTemp& g2,
                     std::map<int, int>& variable_subst)
@@ -1346,6 +1359,11 @@ void dfs(int depth,
             if (same_via_subst(oldgraph, transfers[i].fstGraph, variable_subst)
             && same_via_subst(graph, transfers[i].sndGraph, variable_subst)) {
               transfers[i].isDuplicate = true;
+              // printf("case 3: \n(%s)->(%s) && \n(%s)->(%s)\n",
+              //   oldgraph.to_string().c_str(),
+              //   transfers[i].fstGraph.to_string().c_str(),
+              //   graph.to_string().c_str(),
+              //   transfers[i].sndGraph.to_string().c_str());
               continue;
             }
           }
@@ -1355,6 +1373,11 @@ void dfs(int depth,
             if (same_via_subst(graph, transfers[i].fstGraph, variable_subst)
             && same_via_subst(oldgraph, transfers[i].sndGraph, variable_subst)) {
               transfers[i].isDuplicate = true;
+              // printf("case 4: \n(%s)->(%s) && \n(%s)->(%s)\n",
+              //   oldgraph.to_string().c_str(),
+              //   transfers[i].fstGraph.to_string().c_str(),
+              //   graph.to_string().c_str(),
+              //   transfers[i].sndGraph.to_string().c_str());
               continue;
             }
           }
@@ -1372,7 +1395,7 @@ void dfs(int depth,
   } else {
     hashmap[hashKey] = graph;
   }
-  if (depth >= 4) return; // MAX_NUM_OPS
+  if (depth >= SEARCH_NUM_OPS) return; // MAX_NUM_OPS
   for (int i = 0; i < ops.size(); i++)
     switch (ops[i]->type) {
       case OP_EW_ADD:
